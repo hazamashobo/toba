@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -213,6 +212,7 @@
             display: flex;
             margin-bottom: 15px;
             align-items: baseline;
+            position: relative;
         }
 
         .name-field {
@@ -293,6 +293,8 @@
             padding-left: 20px;
             position: relative;
             color: #ffffff;
+            display: flex;
+            align-items: center;
         }
 
         .career-item::before {
@@ -301,6 +303,35 @@
             left: 0;
             color: #ffffff;
             font-weight: bold;
+        }
+
+        .career-text {
+            flex: 1;
+            display: inline;
+        }
+
+        .article-link {
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+
+        .article-btn {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #666;
+            padding: 4px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        .article-btn:hover {
+            background-color: #555;
+            border-color: #999;
         }
 
         .reference-note {
@@ -423,7 +454,13 @@
             }
 
             .career-item {
-                font-size: 14px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .article-link {
+                margin-left: 0;
+                margin-top: 5px;
             }
         }
 
@@ -510,6 +547,11 @@
                 padding-left: 15px;
             }
 
+            .article-btn {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+
             .reference-note {
                 font-size: 11px;
             }
@@ -574,7 +616,7 @@
                     </div>
                     <div class="field-group">
                         <div class="field-label">住所</div>
-                        <div class="field-value">千葉県市河市八幡2-14-21　グランシャトー本八幡503号室</div>
+                        <div class="field-value">千葉県市河市八町2-14-21　グランシャト本八町503号室</div>
                     </div>
                 </div>
                 <div class="section">
@@ -594,12 +636,22 @@
                 </div>
                 <div class="section">
                     <div class="section-title">学歴・職歴</div>
-                <div class="career-item">2002年3月 多摩美術大学 グラフィックデザイン学科 卒業</div>
-                <div class="career-item">2002年4月 株式会社 芸文出版　入社</div>
-                <div class="career-item">2005年6月 同社　退職</div>
-                <div class="career-item">2005年7月 雑誌編集プロダクションへ転職</div>
-                <div class="career-item">2006年4月 狭間書房　入社</div>
-            </div>
+                    <div class="career-item">
+                        <div class="career-text">2002年3月　多摩美術大学　グラフィックデザイン学科　卒業</div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-text">2002年4月　株式会社　芸文出版　入社 <a href="gazou/kiji.png" class="article-btn" target="_blank">当時の記事</a></div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-text">2005年6月　同社　退職</div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-text">2005年7月　雑誌編集プロダクションへ転職</div>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-text">2006年4月　狭間書房　入社</div>
+                    </div>
+                </div>
                 <div class="reference-note">
                     【社外秘】この情報は機密扱いとし、関係者以外への開示を禁ずる<br>
                     他社員の情報については、「社員名簿」を参照のこと。
